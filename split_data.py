@@ -27,6 +27,10 @@ def split_file(filename):
             if line.startswith("<?xml"):
                 n += 1
                 fname = "{}-{}".format(PATENTS, n)
+            try: 
+                fo.close()
+            except UnboundLocalError:
+                pass                    
             with open(fname,"a") as fo:
                 fo.write(line)
                             
