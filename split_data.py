@@ -36,6 +36,7 @@ def split_file(filename):
                             
         
     fp.close()
+    fo.close()
 
 
 def test():
